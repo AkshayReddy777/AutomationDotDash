@@ -1,0 +1,28 @@
+package org.example;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.*;
+
+public class FloatingMenuTest extends BasePage{
+
+    protected FloatingMenuPage floatingMenuPage;
+
+    @BeforeClass
+    public void setUp(){
+        driver = getDriver();
+        floatingMenuPage = PageFactory.initElements(driver, FloatingMenuPage.class);
+    }
+
+    @Test
+    public void TestFloatingMenu(){
+        floatingMenuPage.ScrollPage();
+        Assert.assertTrue(floatingMenuPage.getHomeIcon().isDisplayed());
+        Assert.assertTrue(floatingMenuPage.getContactIcon().isDisplayed());
+    }
+
+    @AfterMethod
+    public void EndTest(){
+        teardown();
+    }
+}

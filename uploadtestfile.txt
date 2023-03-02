@@ -1,0 +1,5 @@
+<class name="org.example.DragAndDropTest">
+                <methods>
+                    <include name="DragAndDropTest"/>
+                </methods>
+            </class>
