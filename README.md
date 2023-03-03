@@ -1,6 +1,9 @@
 Pre-requisites to execute the test:
-Java 8 || 
-Maven 3.6 ||
+Java 8 
+
+Maven 3.6 
+
+the-internet app running on the localhost:7080 
 
 Steps to Run test:
 1. Clone the repository into local 
