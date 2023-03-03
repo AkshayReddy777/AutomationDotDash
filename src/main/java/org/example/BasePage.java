@@ -14,8 +14,6 @@ public class BasePage {
     public WebDriver getDriver(){
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
         driver.manage().window().maximize();
         driver.get(geturl());
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
