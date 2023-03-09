@@ -27,7 +27,7 @@ public class CheckBoxTest extends BasePage{
     }
 
     @Test
-    public void Check_and_Uncheck_CheckBox2(){
+    public void check_and_Uncheck_CheckBox2(){
         checkBoxPage.navigateCheckBoxPage();
         checkBoxPage.clickCheckbox2();
         Assert.assertFalse(checkBoxPage.getcheckbox2().isSelected());
