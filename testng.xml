@@ -1,91 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/Admin/Desktop/Dotdash" parallel="none">
-        <classes>
-            <class name="org.example.CheckBoxTest">
-                <methods>
-                    <include name="Check_and_Uncheck_CheckBox1"/>
-                    <include name="Check_and_Uncheck_CheckBox2"/>
-                </methods>
-            </class>
-            <class name="org.example.ContextMenuTest">
-                <methods>
-                    <include name="testRightClick"/>
-                </methods>
-            </class>
-
-            <class name="org.example.DropDownTest">
-                <methods>
-                    <include name="Option1Test"/>
-                    <include name="Option2Test"/>
-                </methods>
-            </class>
-            <class name="org.example.DynamicContentTest">
-                <methods>
-                    <include name="DynamicContentTests"/>
-                </methods>
-            </class>
-            <class name="org.example.DynamicControlsTest">
-                <methods>
-                    <include name="testToAddOrRemoveButton"/>
-                    <include name="testToEnableOrDisableButton"/>
-                </methods>
-            </class>
-            <class name="org.example.DynamicLoadingTest">
-                <methods>
-                    <include name="DynamicLoadingTest"/>
-                </methods>
-            </class>
-            <class name="org.example.FileDownloadTest">
-                <methods>
-                    <include name="FileDownloadTest"/>
-                </methods>
-            </class>
-            <class name="org.example.FloatingMenuTest">
-                <methods>
-                    <include name="TestFloatingMenu"/>
-                </methods>
-            </class>
-            <class name="org.example.IFrameTest">
-                <methods>
-                    <include name="IFrameTest"/>
-                </methods>
-            </class>
-            <class name="org.example.JavaScriptAlertsTest">
-                <methods>
-                    <include name="JSAlertTest"/>
-                    <include name="JSConfirmTest"/>
-                    <include name="JSPromptTest"/>
-                </methods>
-            </class>
-            <class name="org.example.JavaScriptErrorTest">
-                <methods>
-                    <include name="JSErrorTest"/>
-                </methods>
-            </class>
-            <class name="org.example.LoginPageTest">
-                <methods>
-                    <include name="validCredslogintest"/>
-                    <include name="invalidUsernamelogintest"/>
-                    <include name="invalidPasswordlogintest"/>
-                </methods>
-            </class>
-            <class name="org.example.MouseHoverTest">
-                <methods>
-                    <include name="MouseHoverTest"/>
-                </methods>
-            </class>
-            <class name="org.example.NewWindowTest">
-                <methods>
-                    <include name="NewWindowTest"/>
-                </methods>
-            </class>
-            <class name="org.example.NotificationMessageTest">
-                <methods>
-                    <include name="NotificationTest"/>
-                </methods>
-            </class>
-        </classes>
+    <test name="all-tests">
+        <packages>
+            <package name="org.example"/>
+        </packages>
     </test>
 </suite>

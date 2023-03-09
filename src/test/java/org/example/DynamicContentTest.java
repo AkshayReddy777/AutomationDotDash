@@ -15,15 +15,15 @@ public class DynamicContentTest extends BasePage {
     }
 
     @Test
-    public void DynamicContentTests(){
+    public void dynamicContentTests(){
 
-        dynamicContentPage.VerifyDynamicContent();
+        dynamicContentPage.verifyDynamicContent();
         Assert.assertNotEquals(dynamicContentPage.beforeChangeText1,dynamicContentPage.afterChangeText1);
         Assert.assertNotEquals(dynamicContentPage.beforeChangeText2,dynamicContentPage.afterChangeText2);
         Assert.assertNotEquals(dynamicContentPage.beforeChangeText3,dynamicContentPage.afterChangeText3);
     }
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         driver.quit();
     }
 }

@@ -15,13 +15,13 @@ public class NewWindowTest extends BasePage{
     }
 
     @Test
-    public void NewWindowTest(){
+    public void newWindowTest(){
         newWindowPage.NewWindow();
         Assert.assertEquals(newWindowPage.getNewWindowText(),"New Window");
     }
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 }

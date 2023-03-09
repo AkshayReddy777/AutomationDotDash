@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CheckBoxPage extends BasePage {
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    By Checkboxes = By.cssSelector("li:nth-of-type(6) > a");
+    By checkboxes = By.cssSelector("li:nth-of-type(6) > a");
     By checkbox1 = By.cssSelector("form#checkboxes > input:nth-of-type(1)");
     By checkbox2 = By.cssSelector("form#checkboxes > input:nth-of-type(2)");
 
@@ -15,8 +15,8 @@ public class CheckBoxPage extends BasePage {
         this.driver = driver;
     }
 
-    public WebElement getCheckBoxPage(){
-        return driver.findElement(Checkboxes);
+    public WebElement getcheckBoxPage(){
+        return driver.findElement(checkboxes);
     }
     public WebElement getcheckbox1(){
         return driver.findElement(checkbox1);
@@ -25,8 +25,8 @@ public class CheckBoxPage extends BasePage {
         return driver.findElement(checkbox2);
     }
 
-    public void NavigateCheckBoxPage(){
-        getCheckBoxPage().click();
+    public void navigateCheckBoxPage(){
+        getcheckBoxPage().click();
     }
     public void clickCheckbox1(){
         getcheckbox1().click();

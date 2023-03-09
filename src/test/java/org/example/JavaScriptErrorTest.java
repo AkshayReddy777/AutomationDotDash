@@ -14,11 +14,11 @@ public class JavaScriptErrorTest extends BasePage{
     }
 
     @Test
-    public void JSErrorTest() throws InterruptedException {
-        Assert.assertTrue(javaScriptErrorPage.JSErrorCheck().contains("http://localhost:7080/javascript_error 6:51 Uncaught TypeError: Cannot read properties of undefined (reading 'xyz')"));
+    public void jsErrorTest() throws InterruptedException {
+        Assert.assertTrue(javaScriptErrorPage.jsErrorCheck().contains("http://localhost:7080/javascript_error 6:51 Uncaught TypeError: Cannot read properties of undefined (reading 'xyz')"));
     }
     @AfterClass
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 

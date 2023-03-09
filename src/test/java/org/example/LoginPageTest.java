@@ -36,7 +36,7 @@ public class LoginPageTest extends BasePage {
 
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 

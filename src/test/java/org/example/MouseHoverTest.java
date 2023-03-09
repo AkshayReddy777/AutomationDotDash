@@ -15,12 +15,12 @@ public class MouseHoverTest extends BasePage{
         mouseHoverPage = PageFactory.initElements(driver, MouseHoverPage.class);
     }
     @Test
-    public void MouseHoverTest() throws AWTException, InterruptedException {
-        mouseHoverPage.HoverOverToImage();
+    public void mouseHoverTest() throws AWTException, InterruptedException {
+        mouseHoverPage.hoverOverToImage();
     }
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 }

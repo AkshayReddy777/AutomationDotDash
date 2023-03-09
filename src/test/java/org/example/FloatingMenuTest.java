@@ -15,14 +15,14 @@ public class FloatingMenuTest extends BasePage{
     }
 
     @Test
-    public void TestFloatingMenu(){
-        floatingMenuPage.ScrollPage();
+    public void testFloatingMenu(){
+        floatingMenuPage.scrollPage();
         Assert.assertTrue(floatingMenuPage.getHomeIcon().isDisplayed());
         Assert.assertTrue(floatingMenuPage.getContactIcon().isDisplayed());
     }
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 }

@@ -13,11 +13,11 @@ import java.util.List;
 
 public class MouseHoverPage extends BasePage{
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    By HoverOption = By.cssSelector("[href='\\/hovers']");
-    By UserIcons = By.cssSelector("div > img[alt='User Avatar']");
-    By UserInfos = By.cssSelector("div > .figcaption > h5");
+    By hoverOption = By.cssSelector("[href='\\/hovers']");
+    By userIcons = By.cssSelector("div > img[alt='User Avatar']");
+    By userInfos = By.cssSelector("div > .figcaption > h5");
 
 
     public MouseHoverPage(WebDriver driver){
@@ -25,17 +25,17 @@ public class MouseHoverPage extends BasePage{
     }
 
     public WebElement getHoverPage(){
-        return driver.findElement(HoverOption);
+        return driver.findElement(hoverOption);
     }
     public List<WebElement> getUserIcons(){
-        return driver.findElements(UserIcons);
+        return driver.findElements(userIcons);
     }
     public List<WebElement> getUserInfos(){
-        return driver.findElements(UserInfos);
+        return driver.findElements(userInfos);
     }
 
 
-    public void HoverOverToImage() {
+    public void hoverOverToImage() {
         WebDriverWait wait = new WebDriverWait(driver,0);
         getHoverPage().click();
         int i = 0;
@@ -45,8 +45,6 @@ public class MouseHoverPage extends BasePage{
             wait.until(ExpectedConditions.visibilityOf(getUserInfos().get(i)));
             Assert.assertTrue(getUserInfos().get(i).isDisplayed());
             i++;
-
         }
-
     }
 }

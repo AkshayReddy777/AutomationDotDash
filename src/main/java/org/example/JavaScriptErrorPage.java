@@ -16,17 +16,17 @@ import static java.awt.SystemColor.window;
 
 public class JavaScriptErrorPage extends BasePage{
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    By JSErrorPage = By.cssSelector("[href='\\/javascript_error']");
+    By jsErrorPage = By.cssSelector("[href='\\/javascript_error']");
     public JavaScriptErrorPage(WebDriver driver){
         this.driver = driver;
     }
 
     public WebElement getJSErrorPage(){
-        return driver.findElement(JSErrorPage);
+        return driver.findElement(jsErrorPage);
     }
-    public List<String> JSErrorCheck() throws InterruptedException {
+    public List<String> jsErrorCheck() throws InterruptedException {
         List<String> errorMessages = new ArrayList<String>();
         List<String> message = new ArrayList<String>();
         message.add("no error");

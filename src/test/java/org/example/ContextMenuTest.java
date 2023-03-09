@@ -16,13 +16,13 @@ public class ContextMenuTest extends BasePage {
 
     @Test
     public void testRightClick(){
-        contextMenuPage.RightClickOnContextMenuBox();
-        Assert.assertEquals(contextMenuPage.AlertMenuText(), "You selected a context menu");
+        contextMenuPage.rightClickOnContextMenuBox();
+        Assert.assertEquals(contextMenuPage.alertMenuText(), "You selected a context menu");
         driver.switchTo().alert().accept();
     }
 
     @AfterClass
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 

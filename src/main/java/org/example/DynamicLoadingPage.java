@@ -8,37 +8,36 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DynamicLoadingPage extends BasePage {
 
-    public WebDriver driver;
-    By DynamicLoadingPage = By.cssSelector("[href='\\/dynamic_loading']");
-    By Example2 = By.cssSelector("[href='\\/dynamic_loading\\/2']");
-    By StartButton = By.cssSelector("div#start > button");
+    protected WebDriver driver;
+    By dynamicLoadingPage = By.cssSelector("[href='\\/dynamic_loading']");
+    By example2 = By.cssSelector("[href='\\/dynamic_loading\\/2']");
+    By startButton = By.cssSelector("div#start > button");
 
-    By HelloWorldText = By.cssSelector("div#finish > h4");
+    By helloWorldText = By.cssSelector("div#finish > h4");
 
     public DynamicLoadingPage(WebDriver driver){
         this.driver = driver;
     }
 
     public WebElement getDynamicLoadingPage(){
-        return driver.findElement(DynamicLoadingPage);
+        return driver.findElement(dynamicLoadingPage);
     }
     public WebElement getExample2Page(){
-        return driver.findElement(Example2);
+        return driver.findElement(example2);
     }
     public WebElement getStartButton(){
-        return driver.findElement(StartButton);
+        return driver.findElement(startButton);
     }
 
     public WebElement getHelloWorldText(){
-        return driver.findElement(HelloWorldText);
+        return driver.findElement(helloWorldText);
     }
     public void clickStartButton(){
-
         getDynamicLoadingPage().click();
         getExample2Page().click();
         getStartButton().click();
         WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(HelloWorldText));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(helloWorldText));
     }
 
 

@@ -8,27 +8,27 @@ import java.util.Random;
 
 public class NotificationMessagePage extends BasePage{
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    By NotificationPage = By.cssSelector("[href='\\/notification_message']");
-    By ClickhereOption = By.cssSelector("[href='\\/notification_message']");
+    By notificationPage = By.cssSelector("[href='\\/notification_message']");
+    By clickhereOption = By.cssSelector("[href='\\/notification_message']");
 
-    By NotificationPageText = By.cssSelector("div#flash");
+    By notificationPageText = By.cssSelector("div#flash");
 
     public NotificationMessagePage(WebDriver driver){
         this.driver = driver;
     }
     public WebElement getNotificationPage(){
-        return driver.findElement(NotificationPage);
+        return driver.findElement(notificationPage);
     }
     public WebElement getClickOption(){
-        return driver.findElement(ClickhereOption);
+        return driver.findElement(clickhereOption);
     }
     public String getNotificationMessage(){
-        return driver.findElement(NotificationPageText).getAttribute("innerText");
+        return driver.findElement(notificationPageText).getAttribute("innerText");
     }
 
-    public void NotificationMessageAction(){
+    public void notificationMessageAction(){
 
         getNotificationPage().click();
         Random rd = new Random();
@@ -39,7 +39,7 @@ public class NotificationMessagePage extends BasePage{
         }
     }
 
-    public String[] NotificationMessageArray(){
+    public String[] notificationMessageArray(){
         String[] messages = {" Action successful"," Action unsuccesful, please try again"};
         return messages;
     }

@@ -14,11 +14,11 @@ import java.awt.event.InputEvent;
 
 public class DragAndDropPage extends BasePage {
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    By DragAndDropPage = By.cssSelector("[href='\\/drag_and_drop']");
-    By ElementA = By.cssSelector("div#column-a");
-    By ElementB = By.cssSelector("div#column-b");
+    By dragAndDropPage = By.cssSelector("[href='\\/drag_and_drop']");
+    By elementA = By.cssSelector("div#column-a");
+    By elementB = By.cssSelector("div#column-b");
 
 
     public DragAndDropPage(WebDriver driver){
@@ -26,18 +26,18 @@ public class DragAndDropPage extends BasePage {
     }
 
     public WebElement getDragandDropPage(){
-        return driver.findElement(DragAndDropPage);
+        return driver.findElement(dragAndDropPage);
     }
 
     public WebElement getElementA(){
-        return driver.findElement(ElementA);
+        return driver.findElement(elementA);
     }
 
     public WebElement getElementB(){
-        return driver.findElement(ElementB);
+        return driver.findElement(elementB);
     }
 
-    public void DragAndDrop() throws AWTException, InterruptedException {
+    public void dragAndDrop() throws AWTException, InterruptedException {
         getDragandDropPage().click();
 
             Robot robot = new Robot();

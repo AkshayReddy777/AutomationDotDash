@@ -9,23 +9,23 @@ import java.io.File;
 
 public class FileDownloadPage extends BasePage {
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    By FileDownloadPage = By.cssSelector("[href='\\/download']");
-    By FileToBeDownloaded = By.cssSelector("[href='download\\/some-file\\.txt']");
+    By fileDownloadPage = By.cssSelector("[href='\\/download']");
+    By fileToBeDownloaded = By.cssSelector("[href='download\\/some-file\\.txt']");
 
     public FileDownloadPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public WebElement getFileDownloadPage(){
-        return driver.findElement(FileDownloadPage);
+        return driver.findElement(fileDownloadPage);
     }
     public WebElement getFileToBeDownloaded(){
-        return driver.findElement(FileToBeDownloaded);
+        return driver.findElement(fileToBeDownloaded);
     }
 
-    public String FileDownload(){
+    public String fileDownload(){
 
         getFileDownloadPage().click();
         getFileToBeDownloaded().click();

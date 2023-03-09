@@ -8,8 +8,8 @@ import java.util.List;
 
 public class DynamicContentPage extends BasePage{
 
-    public WebDriver driver;
-    By DynamicContentPage = By.cssSelector("[href='\\/dynamic_content']");
+    protected WebDriver driver;
+    By dynamicContentPage = By.cssSelector("[href='\\/dynamic_content']");
     By dynamicContents = By.xpath("//div[@class='large-10 columns']");
 
     final int firstIndex = 0;
@@ -26,10 +26,10 @@ public class DynamicContentPage extends BasePage{
     }
 
     public WebElement getDynamicContentPage(){
-        return driver.findElement(DynamicContentPage);
+        return driver.findElement(dynamicContentPage);
     }
 
-    public void VerifyDynamicContent(){
+    public void verifyDynamicContent(){
 
         getDynamicContentPage().click();
         beforeChangeText1 = textRelatedToIndex(firstIndex);

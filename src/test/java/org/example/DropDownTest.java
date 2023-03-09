@@ -15,7 +15,7 @@ public class DropDownTest extends BasePage{
     }
 
     @Test
-    public void Option1Test(){
+    public void option1Test(){
 
         dropDownPage.selectOption1();
         Assert.assertEquals(dropDownPage.getSelectedOption(),"Option 1");
@@ -23,13 +23,13 @@ public class DropDownTest extends BasePage{
     }
 
     @Test
-    public void Option2Test(){
+    public void option2Test(){
         dropDownPage.selectOption2();
         Assert.assertEquals(dropDownPage.getSelectedOption(),"Option 2");
     }
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 

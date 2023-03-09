@@ -15,23 +15,23 @@ public class JavaScriptAlertsTest extends BasePage{
     }
 
     @Test
-    public void JSAlertTest(){
+    public void jsAlertTest(){
 
-        Assert.assertEquals(javaScriptAlertsPage.JSAlertClick(),"You successfuly clicked an alert");
+        Assert.assertEquals(javaScriptAlertsPage.jsAlertClick(),"You successfuly clicked an alert");
     }
     @Test
-    public void JSConfirmTest(){
+    public void jsConfirmTest(){
 
-        Assert.assertEquals(javaScriptAlertsPage.JSConfirmClick(),"You clicked: Ok");
+        Assert.assertEquals(javaScriptAlertsPage.jsConfirmClick(),"You clicked: Ok");
     }
     @Test
-    public void JSPromptTest(){
+    public void jsPromptTest(){
 
-        Assert.assertEquals(javaScriptAlertsPage.JSPromptClick(),"You entered: text message");
+        Assert.assertEquals(javaScriptAlertsPage.jsPromptClick(),"You entered: text message");
     }
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 }

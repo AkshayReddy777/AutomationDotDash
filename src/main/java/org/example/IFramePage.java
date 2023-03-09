@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 
 public class IFramePage extends BasePage{
 
-    public WebDriver driver;
-    By IFramePage = By.cssSelector("[href='\\/frames']");
-    By IFrameOption = By.cssSelector("[href='\\/iframe']");
+    protected WebDriver driver;
+    By iFramePage = By.cssSelector("[href='\\/frames']");
+    By iFrameOption = By.cssSelector("[href='\\/iframe']");
 
-    By TextBoxInFrame = By.cssSelector("body#tinymce > p");
+    By textBoxInFrame = By.cssSelector("body#tinymce > p");
 
 
     public IFramePage(WebDriver driver){
@@ -18,18 +18,18 @@ public class IFramePage extends BasePage{
     }
 
     public WebElement getIFramePage(){
-        return driver.findElement(IFramePage);
+        return driver.findElement(iFramePage);
     }
 
     public WebElement getIFrameOption(){
-        return driver.findElement(IFrameOption);
+        return driver.findElement(iFrameOption);
     }
 
     public WebElement getTextBoxInFrame(){
-        return driver.findElement(TextBoxInFrame);
+        return driver.findElement(textBoxInFrame);
     }
 
-    public void IFrameText(){
+    public void iFrameText(){
 
         getIFramePage().click();
         getIFrameOption().click();

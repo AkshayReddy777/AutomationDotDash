@@ -11,10 +11,10 @@ import org.testng.Assert;
 
 public class DynamicControlsPage extends BasePage{
 
-    public WebDriver driver;
-    By DynamicControlsPage = By.cssSelector("[href='\\/dynamic_controls']");
-    By AddButton = By.cssSelector("form#checkbox-example > button[type='button']");
-    By EnableButton = By.cssSelector("form#input-example > button[type='button']");
+    protected WebDriver driver;
+    By dynamicControlsPage = By.cssSelector("[href='\\/dynamic_controls']");
+    By addButton = By.cssSelector("form#checkbox-example > button[type='button']");
+    By enableButton = By.cssSelector("form#input-example > button[type='button']");
     By checkbox = By.cssSelector("[type='checkbox']");
     By textbox = By.cssSelector("[type='text']");
     By successMessage = By.cssSelector("p#message");
@@ -22,13 +22,13 @@ public class DynamicControlsPage extends BasePage{
         this.driver = driver;
     }
     public WebElement getDynamicControlsPage(){
-        return driver.findElement(DynamicControlsPage);
+        return driver.findElement(dynamicControlsPage);
     }
     public WebElement getAddButton(){
-        return driver.findElement(AddButton);
+        return driver.findElement(addButton);
     }
     public WebElement getEnableButton(){
-        return driver.findElement(EnableButton);
+        return driver.findElement(enableButton);
     }
     public WebElement getCheckBox(){
         return driver.findElement(checkbox);
@@ -39,7 +39,7 @@ public class DynamicControlsPage extends BasePage{
     public WebElement getsuccessMessage(){
         return driver.findElement(successMessage);
     }
-    public void RemoveOrAddButton(){
+    public void removeOrAddButton(){
 
         getDynamicControlsPage().click();
         WebDriverWait wait = new WebDriverWait(driver, 20);
@@ -55,7 +55,7 @@ public class DynamicControlsPage extends BasePage{
     }
 
 
-    public void EnableTextField(){
+    public void enableTextField(){
 
         getDynamicControlsPage().click();
         WebDriverWait wait = new WebDriverWait(driver, 20);

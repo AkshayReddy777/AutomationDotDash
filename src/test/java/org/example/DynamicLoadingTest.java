@@ -20,7 +20,7 @@ public class DynamicLoadingTest extends BasePage{
         Assert.assertEquals(dynamicLoadingPage.getHelloWorldText().getText(),"Hello World!");
     }
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 }

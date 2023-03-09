@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.Select;
 
 public class DropDownPage extends BasePage {
 
-    public WebDriver driver;
-    By DropDownPage = By.cssSelector("[href='\\/dropdown']");
-    By DropDownSelector = By.cssSelector("select#dropdown");
+    protected WebDriver driver;
+    By dropDownPage = By.cssSelector("[href='\\/dropdown']");
+    By dropDownSelector = By.cssSelector("select#dropdown");
 
 
     public DropDownPage(WebDriver driver){
@@ -17,21 +17,18 @@ public class DropDownPage extends BasePage {
     }
 
     public WebElement getDropDownPage(){
-        return driver.findElement(DropDownPage);
+        return driver.findElement(dropDownPage);
     }
 
     public WebElement getDropDownSelector(){
-        return driver.findElement(DropDownSelector);
+        return driver.findElement(dropDownSelector);
     }
 
 
     public void selectOption1(){
-
-
         getDropDownPage().click();
         Select DropDownSelect = new Select(getDropDownSelector());
         DropDownSelect.selectByVisibleText("Option 1");
-
     }
     public void selectOption2(){
 

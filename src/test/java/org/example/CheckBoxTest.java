@@ -18,8 +18,8 @@ public class CheckBoxTest extends BasePage{
     }
 
     @Test
-    public void Check_and_Uncheck_CheckBox1(){
-        checkBoxPage.NavigateCheckBoxPage();
+    public void check_and_Uncheck_CheckBox1(){
+        checkBoxPage.navigateCheckBoxPage();
         checkBoxPage.clickCheckbox1();
         Assert.assertTrue(checkBoxPage.getcheckbox1().isSelected());
         checkBoxPage.clickCheckbox1();
@@ -28,7 +28,7 @@ public class CheckBoxTest extends BasePage{
 
     @Test
     public void Check_and_Uncheck_CheckBox2(){
-        checkBoxPage.NavigateCheckBoxPage();
+        checkBoxPage.navigateCheckBoxPage();
         checkBoxPage.clickCheckbox2();
         Assert.assertFalse(checkBoxPage.getcheckbox2().isSelected());
         checkBoxPage.clickCheckbox2();
@@ -36,7 +36,7 @@ public class CheckBoxTest extends BasePage{
     }
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 

@@ -20,14 +20,14 @@ public class FileUploadTest extends BasePage {
     }
 
     @Test
-    public void FileUploadTest(){
+    public void fileUploadTest(){
         fileUploadPage.getFileUploadPage();
-        fileUploadPage.UploadFile();
+        fileUploadPage.uploadFile();
         Assert.assertEquals(fileUploadPage.getFileUploadedMessage().getText(),"File Uploaded!");
     }
 
     @AfterTest
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 

@@ -10,28 +10,28 @@ import java.io.File;
 
 public class FileUploadPage extends BasePage{
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    By FileUploadPage = By.cssSelector("[href='\\/upload']");
+    By fileUploadPage = By.cssSelector("[href='\\/upload']");
     By chooseFileButton = By.cssSelector("input#file-upload");
-    By UploadButton = By.cssSelector("[type='submit']");
-    By FileUploadedMessage = By.xpath("//div[@id='content']//h3[.='File Uploaded!']");
+    By uploadButton = By.cssSelector("[type='submit']");
+    By fileUploadedMessage = By.xpath("//div[@id='content']//h3[.='File Uploaded!']");
 
     public FileUploadPage(WebDriver driver){
         this.driver = driver;
     }
     public WebElement getFileUploadPage(){
-        return driver.findElement(FileUploadPage);
+        return driver.findElement(fileUploadPage);
     }
     public WebElement getchooseFileButton(){
         return driver.findElement(chooseFileButton);
     }
     public WebElement getUploadButton(){
-        return driver.findElement(UploadButton);
+        return driver.findElement(uploadButton);
     }
-    public WebElement getFileUploadedMessage(){ return driver.findElement(FileUploadedMessage);}
+    public WebElement getFileUploadedMessage(){ return driver.findElement(fileUploadedMessage);}
 
-    public void UploadFile(){
+    public void uploadFile(){
         getFileUploadPage().click();
         String filePath = new File("uploadtestfile.txt").getAbsolutePath();
         WebDriverWait wait = new WebDriverWait(driver,10);

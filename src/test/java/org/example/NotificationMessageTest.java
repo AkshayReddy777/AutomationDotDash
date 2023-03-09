@@ -13,14 +13,14 @@ public class NotificationMessageTest extends BasePage{
         notificationMessagePage = PageFactory.initElements(driver, NotificationMessagePage.class);
     }
     @Test
-    public void NotificationTest(){
-        notificationMessagePage.NotificationMessageAction();
-        Assert.assertTrue(notificationMessagePage.arrayContainsString(notificationMessagePage.NotificationMessageArray(),notificationMessagePage.getNotificationMessage()));
+    public void notificationTest(){
+        notificationMessagePage.notificationMessageAction();
+        Assert.assertTrue(notificationMessagePage.arrayContainsString(notificationMessagePage.notificationMessageArray(),notificationMessagePage.getNotificationMessage()));
     }
 
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 

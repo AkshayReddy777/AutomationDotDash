@@ -15,12 +15,12 @@ public class FileDownloadTest extends BasePage{
     }
 
     @Test
-    public void FileDownloadTest(){
-        Assert.assertEquals(fileDownloadPage.FileDownload(),"C:\\Users\\Admin\\Downloads\\some-file");
+    public void fileDownloadTest(){
+        Assert.assertEquals(fileDownloadPage.fileDownload(),"C:\\Users\\Admin\\Downloads\\some-file");
     }
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 }

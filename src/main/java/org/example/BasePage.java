@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BasePage {
 
-    public static WebDriver driver;
+    protected static WebDriver driver;
 
     public WebDriver getDriver(){
         WebDriverManager.chromedriver().setup();

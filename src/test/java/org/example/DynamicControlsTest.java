@@ -18,15 +18,15 @@ public class DynamicControlsTest extends BasePage{
     }
     @Test
     public void testToAddOrRemoveButton(){
-        dynamicControlsPage.RemoveOrAddButton();
+        dynamicControlsPage.removeOrAddButton();
     }
     @Test
     public void testToEnableOrDisableButton(){
-        dynamicControlsPage.EnableTextField();
+        dynamicControlsPage.enableTextField();
     }
 
     @AfterMethod
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 

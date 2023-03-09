@@ -9,32 +9,32 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class JavaScriptAlertsPage extends BasePage{
 
-    public WebDriver driver;
-    By JavaScriptAlertsPage = By.cssSelector("[href='\\/javascript_alerts']");
-    By JSAlertButton = By.cssSelector("[onclick='jsAlert\\(\\)']");
-    By JSConfirmButton = By.cssSelector("[onclick='jsConfirm\\(\\)']");
-    By JSPrompt = By.cssSelector("[onclick='jsPrompt\\(\\)']");
-    By AlertMessage = By.cssSelector("p#result");
+    protected WebDriver driver;
+    By javaScriptAlertsPage = By.cssSelector("[href='\\/javascript_alerts']");
+    By jsAlertButton = By.cssSelector("[onclick='jsAlert\\(\\)']");
+    By jsConfirmButton = By.cssSelector("[onclick='jsConfirm\\(\\)']");
+    By jsPrompt = By.cssSelector("[onclick='jsPrompt\\(\\)']");
+    By alertMessage = By.cssSelector("p#result");
     public JavaScriptAlertsPage(WebDriver driver){
         this.driver = driver;
     }
 
     public WebElement getJavaScriptAlertsPage(){
-        return driver.findElement(JavaScriptAlertsPage);
+        return driver.findElement(javaScriptAlertsPage);
     }
     public WebElement getJSAlertButton(){
-        return driver.findElement(JSAlertButton);
+        return driver.findElement(jsAlertButton);
     }
     public WebElement getJSConfirmButton(){
-        return driver.findElement(JSConfirmButton);
+        return driver.findElement(jsConfirmButton);
     }
     public WebElement getJSPrompt(){
-        return driver.findElement(JSPrompt);
+        return driver.findElement(jsPrompt);
     }
     public WebElement getAlertMessage(){
-        return driver.findElement(AlertMessage);
+        return driver.findElement(alertMessage);
     }
-    public String JSAlertClick(){
+    public String jsAlertClick(){
 
         getJavaScriptAlertsPage().click();
         getJSAlertButton().click();
@@ -42,7 +42,7 @@ public class JavaScriptAlertsPage extends BasePage{
         return getAlertMessage().getText();
     }
 
-    public String JSConfirmClick(){
+    public String jsConfirmClick(){
 
         getJavaScriptAlertsPage().click();
         getJSConfirmButton().click();
@@ -50,7 +50,7 @@ public class JavaScriptAlertsPage extends BasePage{
         return getAlertMessage().getText();
     }
 
-    public String JSPromptClick(){
+    public String jsPromptClick(){
 
         getJavaScriptAlertsPage().click();
         getJSPrompt().click();

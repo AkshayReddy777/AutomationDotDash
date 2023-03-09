@@ -9,26 +9,26 @@ import java.util.Iterator;
 
 public class NewWindowPage extends BasePage{
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    By WindowPage = By.cssSelector("[href='\\/windows']");
-    By ClickHereOption = By.cssSelector("div#content  a[target='_blank']");
+    By windowPage = By.cssSelector("[href='\\/windows']");
+    By clickHereOption = By.cssSelector("div#content  a[target='_blank']");
 
-    By NewWindowText = By.cssSelector("h3");
+    By newWindowText = By.cssSelector("h3");
     public NewWindowPage(WebDriver driver){
         this.driver = driver;
     }
 
     public WebElement getWindowPage(){
-        return driver.findElement(WindowPage);
+        return driver.findElement(windowPage);
     }
 
     public String getNewWindowText(){
-        return driver.findElement(NewWindowText).getText();
+        return driver.findElement(newWindowText).getText();
     }
 
     public WebElement getClickHereOption(){
-        return driver.findElement(ClickHereOption);
+        return driver.findElement(clickHereOption);
     }
 
     public void NewWindow(){

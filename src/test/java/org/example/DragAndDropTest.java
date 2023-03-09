@@ -19,14 +19,14 @@ public class DragAndDropTest extends BasePage{
     }
 
     @Test
-    public void DragAndDropTest() throws AWTException, InterruptedException {
-        dragAndDropPage.DragAndDrop();
+    public void dragAndDropTest() throws AWTException, InterruptedException {
+        dragAndDropPage.dragAndDrop();
         Assert.assertEquals(dragAndDropPage.getElementA().getText(),"B");
         Assert.assertEquals(dragAndDropPage.getElementB().getText(),"A");
 
     }
     @AfterTest
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 }

@@ -15,13 +15,13 @@ public class IFrameTest extends BasePage{
     }
 
     @Test
-    public void IFrameTest(){
-        iFramePage.IFrameText();
+    public void iFrameTest(){
+        iFramePage.iFrameText();
         Assert.assertEquals(iFramePage.getTextBoxInFrame().getText(),"Text is sent");
     }
 
     @AfterClass
-    public void EndTest(){
+    public void endTest(){
         teardown();
     }
 }
