@@ -1,7 +1,11 @@
 Pre-requisites to execute the test:
-Java 8
-Maven 3.6
+Java 8 
+
+Maven 3.6 
+
+the-internet app running on the localhost:7080 
+
 Steps to Run test:
-Clone the repository into local 
-from master branch run -> mvn clean test
-After test is completed, access the report from /target/surefire-reports/index.htm
+1. Clone the repository into local 
+2. from master branch run -> mvn clean test
+3. After test is completed, access the report from /target/surefire-reports/index.html
